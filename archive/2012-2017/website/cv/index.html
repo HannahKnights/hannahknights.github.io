@@ -1,0 +1,125 @@
+<html>
+  <!--
+* PyWebCopy Engine [version 7.1]
+* Copyright 2020; Raja Tomar
+* File mirrored from [https://hannah-knights-site.herokuapp.com/archive/20122017/cv]
+* At UTC datetime: [2026-08-25 18:29:44.506542]
+--><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="keywords" content="contemporary, art, artist, hannah, knights, s1artspace">
+    <title>hannahknights.co.uk</title>
+    <link href="../static/style/base.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+
+        <div id="cv">
+            <p>
+            hannah.knights@hotmail.co.uk<br>
+            <br>
+            b. 1989<br>
+            Lives and works in London.
+            <br>
+            <br>
+            Studio holder at <a href="www.s1artspace.org">S1 Artspace</a> (2011-2013)
+            <br>
+            Studied at Edinburgh College of Art (2007-2011)<br><br>
+            <br>
+            </p><div id="back"><a href="../" class="blank"> <p2> &lt; back </p2></a></div>
+        </div>
+
+
+    <script src="../../code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script>
+
+
+      function hover() {
+        $('a.info').addClass('hover')
+      }
+
+      function unhover() {
+        $('a.info').removeClass('hover')
+      }
+
+      function openLink() {
+        window.open( $('a.info').attr('href') , '_self')
+      }
+
+      function openWorkLayout() {
+        var imgNum = $(this).attr('data')
+        var workLayout = $('img[data="' + imgNum + '"]')
+        if (workLayout) {
+          var openImg = $('img:visible')
+          var zIndex = 2
+          if (openImg) {
+            openImg.each( function() {
+              if ( $(this).css('z-index') >= zIndex ) {
+                zIndex = zIndex + 1
+              }
+            })
+          }
+          $('div.shutLinks').show()
+          workLayout.css('z-index', zIndex)
+          workLayout.show()
+          $('table a.shut').first().attr('data', imgNum)
+        }
+      }
+
+      function closeWorkLayout() {
+        if ( $(this).attr('data') == 'all' ) {
+          closeAll()
+        }
+        else {
+          var img = $(this).attr('data')
+          $('img[data="' + img +'"]').hide()
+          updateLinkData()
+          if ( ! $('img:visible').length ) {
+            $('div.shutLinks').hide()
+          }
+        }
+      }
+
+      function closeAll() {
+        $('img').hide()
+        $('div.shutLinks').hide()
+      }
+
+      function updateLinkData() {
+        var imgNum = ''
+        var closeImgLink = $('table a.shut').first()
+        var openImg = $('img:visible')
+        if (openImg.length > 1) {
+          counter = 0
+          openImg.each( function() {
+            zIndex = 0
+            currentZ = $(this).css('z-index')
+            if (currentZ > zIndex) {
+              zIndex = currentZ
+              imgNum = $(this).attr('data')
+            }
+          })
+        }
+        else {
+          var imgNum = openImg.first().attr('data')
+        }
+        closeImgLink.attr( 'data', imgNum )
+      }
+
+      $(document).ready( function() {
+
+        var mask = $('#mask')
+        var workLink = $('table a.open')
+        var closeLink = $('table a.shut')
+
+        mask.mouseenter( hover )
+
+        mask.mouseleave( unhover )
+
+        mask.click( openLink )
+
+        workLink.click( openWorkLayout )
+
+        closeLink.click( closeWorkLayout )
+
+      })
+    </script>
+  </body>
+</html>
