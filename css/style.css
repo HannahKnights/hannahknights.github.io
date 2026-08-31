@@ -51,7 +51,7 @@ a.about, a.about:visited {
 
 #feed {
     padding-top: 100px;
-    width: 100%;
+    width: 95%;
     max-width: 700px;
     margin: 0 auto;
 }
@@ -74,7 +74,12 @@ a.about, a.about:visited {
     background-color: black;
     color: white;
     font-size: 20px;
-    padding: 200px 200px 200px 200px;
+    padding: 15% 15% 15% 15%;
+    min-height: 60%;
+    min-width: 70%;
+    max-width: 100%;
+    align-content: center;
+    text-align: justify;
 }
 
 /* about */
@@ -107,4 +112,13 @@ a.about, a.about:visited {
     /* min-height: 100vh; */
     /* background: #f0f0f0; */
     overflow: none;
+}
+
+
+@media (max-width: 750px) {
+
+    .feed-item .text-container {
+        padding: 100px;
+    }
+
 }
