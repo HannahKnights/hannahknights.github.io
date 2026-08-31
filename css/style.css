@@ -11,6 +11,8 @@ body {
     width: 100%;
     overflow-x: hidden;
     -ms-overflow-style:none;
+    overscroll-behavior-y: none;
+    overscroll-behavior: none;
 }
 
 ::-webkit-scrollbar, ::-webkit-scrollbar-button {
