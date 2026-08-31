@@ -22,8 +22,8 @@ body {
 #canvas {
     position: fixed;
     z-index:2;
-    top: 10px;
-    left: 10px;
+    top: 0px;
+    left: 0px;
     width: calc(100% - 20px);
     max-width: 1200px;
 }
@@ -60,7 +60,7 @@ a.about, a.about:visited {
 
 #feed {
     /* padding-top: 100px; */
-    width: 90%;
+    width: calc(100% - 40px);
     max-width: 700px;
     margin: 0 auto;
 }
