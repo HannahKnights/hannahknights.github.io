@@ -32,13 +32,13 @@ window.onload = (event) => {
 
         if (scroll_y >= threshhold_bottom) {
             // too far down
-            console.log('reached the bottom...')
+            //console.log('reached the bottom...')
             // console.log('scrollY...', scroll_y)
             // console.log('scroll to:', threshold_top)
-            window.scrollTo(0, threshold_top);
+            window.scrollTo(0, reset_top);
         } else if (scroll_y < threshold_top) {
             // too far up
-            console.log('reached the top...')
+            //console.log('reached the top...')
             // console.log('scrollY...', scroll_y)
             // console.log('scroll to:', threshold_top)
             window.scrollTo(0, reset_bottom);
