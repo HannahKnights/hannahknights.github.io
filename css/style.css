@@ -63,7 +63,7 @@ a.about, a.about:visited {
 #feed {
     /* padding-top: 100px; */
     width: calc(100% - 40px);
-    max-width: 700px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -104,8 +104,7 @@ a.about, a.about:visited {
 #about-content {
     display: flex;
     flex-direction: column;
-    padding: 50px;
-    padding-top: 100px;
+    padding: 100px 20px 100px 20px;
     z-index: 3;
 }
 
@@ -115,6 +114,27 @@ a.about, a.about:visited {
 
 #about-content .block p {
     margin-bottom: 20px;
+}
+
+/* Project pages */
+
+.project-grid {
+    display: flex;
+}
+
+.col-1 {
+    flex: 40%;
+    margin-right: 10px;
+}
+
+.col-2 {
+    flex: 60%;
+    margin-left: 10px;
+}
+
+.col-2 .project-img {
+    width: 100%;
+    padding-bottom: 20px;
 }
 
 
@@ -131,4 +151,20 @@ a.about, a.about:visited {
         font-size: 18px;
     }
 
+    .project-grid {
+        display: block;
+    }
+
+}
+
+@media (min-width: 750px) {
+    #feed {
+        max-width: 60%;
+    }
+}
+
+@media (min-width: 2000px) {
+    #feed {
+        max-width: 50%;
+    }
 }
