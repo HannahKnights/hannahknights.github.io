@@ -45,7 +45,7 @@ a.about, a.about:visited {
     color: black;
 }
 
-.block a, a.about:hover {
+.block a, a.about:hover, .feed-item a, .feed-item a:visited {
     color: blue;
 }
 
