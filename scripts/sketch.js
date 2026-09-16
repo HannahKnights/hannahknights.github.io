@@ -1,5 +1,16 @@
 
-let words = ["is a work in progress", "is a something", "is an artist", "is loading...", "is interested in culture & technology", "likes words, likes images, likes both", "is interested in the past and the future", "is thinking..."];
+let words = [
+    "is a work in progress", 
+    // "is a something", 
+    "is an artist", 
+    "is loading...", 
+    "is interested in culture & technology", 
+    "likes words & images", 
+    "is interested in the past & the future", 
+    "is an artist & researcher", 
+    "is thinking...",
+    "uses words & images"
+];
 let index = 0;
 
 function sketch1(p) {
