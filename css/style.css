@@ -116,6 +116,21 @@ a.about, a.about:visited {
     margin-bottom: 20px;
 }
 
+.about-grid {
+    display: flex;
+}
+
+.about-grid .col-1 {
+    flex: 70%;
+    margin-right: 10px;
+}
+
+.about-grid .col-2 {
+    flex: 30%;
+    margin-left: 10px;
+    margin-top: 100px;
+}
+
 /* Project pages */
 
 .project-grid {
@@ -153,6 +168,15 @@ a.about, a.about:visited {
 
     .project-grid {
         display: block;
+    }
+
+    .about-grid {
+        display: block;
+    }
+
+    .about-grid .col-2 {
+        margin-left: 0px;
+        margin-top: 0px;
     }
 
 }
